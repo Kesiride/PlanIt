@@ -1,6 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, View, ImageBackground, TextInput, Button, Alert } from 'react-native';
-import Task from './components/Task';
+import { StyleSheet, Text, View, ImageBackground, Button, Alert } from 'react-native';
+import Login from './components/login/login';
 
 export default function App() {
   // PostItem.getImageState("./assets/PlanIt.jpeg");
@@ -14,16 +14,7 @@ export default function App() {
       </View>
       
       <View style={styles.items}>
-        <Task text={'Email'} />
-        <Task text={'Username'} />
-        <Task text={'Password'} />
-
-        <View style={styles.button}>
-          <Button title="Sign Up" onPress={() => Alert.alert('Simple Button pressed')}>
-          </Button>
-        </View>
-        
-        <Text style={styles.accountLogin}>Already have an account? Log in</Text>
+        <Login />
       </View>
     </View>
   );
@@ -53,20 +44,6 @@ const styles = StyleSheet.create({
     flex: 1,
     textAlign: 'center',
     justifyContent: 'center'
-  },
-  button: {
-    backgroundColor: '#55BCF6',
-    alignItems: 'center',
-    alignSelf: 'center',
-    width: 150,
-    height: 40,
-    margin: 20,
-    borderRadius: 10,
-    fontWeight: 'bold'
-  },
-  accountLogin: {
-    alignSelf: 'center',
-    marginBottom: 20
   }
 });
 
